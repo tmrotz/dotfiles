@@ -5,9 +5,11 @@ export EDITOR='nvim'
 
 export BROWSER=google-chrome
 
-export ZELLIJ_CONFIG_FILE=~/dotfiles/zellij.kdl
+export STARSHIP_CONFIG=~/dotfiles/starship.toml
 
-export PATH="$HOME/zig-linux-x86_64-0.12.0:$PATH"
+export ZELLIJ_CONFIG_DIR=~/dotfiles/zellij
+
+export PATH="$HOME/code/zig/zig-linux-x86_64-0.13.0-dev.211+6a65561e3:$PATH"
 
 # curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init bash)"

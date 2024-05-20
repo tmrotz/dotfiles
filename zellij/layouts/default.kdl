@@ -1,0 +1,26 @@
+layout {
+    default_tab_template {
+        pane size=1 {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="bash" {
+        pane cwd="~/"
+    }
+    tab name="neovim" {
+        pane cwd="~/.config/nvim/" edit="."
+    }
+    tab name="dotfiles" {
+        pane cwd="~/dotfiles/" edit="."
+    }
+    tab cwd="~/code/zig/ziglings.org/" name="zigling" {
+        pane stacked=true {
+            pane name="bash"
+            pane name="neovim" edit="."
+        }
+    }
+}
