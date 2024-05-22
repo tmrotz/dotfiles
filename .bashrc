@@ -1,6 +1,8 @@
 
 set -o vi
 
+alias neovim='nvim'
+
 export EDITOR='nvim'
 
 export BROWSER=google-chrome
