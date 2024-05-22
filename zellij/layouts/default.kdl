@@ -17,10 +17,10 @@ layout {
     tab name="dotfiles" {
         pane cwd="~/dotfiles/" edit="."
     }
-    tab cwd="~/code/zig/ziglings.org/" name="zigling" {
+    tab cwd="~/code/zig/ziglings.org/" name="ziglings" {
         pane stacked=true {
-            pane name="bash"
             pane name="neovim" edit="."
+            pane name="bash"
         }
     }
 }
