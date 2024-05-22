@@ -8,19 +8,22 @@ layout {
             plugin location="zellij:status-bar"
         }
     }
-    tab name="bash" {
-        pane cwd="~/"
-    }
-    tab name="neovim" {
-        pane cwd="~/.config/nvim/" edit="."
-    }
-    tab name="dotfiles" {
-        pane cwd="~/dotfiles/" edit="."
-    }
-    tab cwd="~/code/zig/ziglings.org/" name="ziglings" {
+    pane_template name="neovim-bash" {
         pane stacked=true {
-            pane name="neovim" edit="."
+            pane name="neovim" command="nvim"
             pane name="bash"
         }
+    }
+    tab name="bash" cwd="~/" {
+        pane
+    }
+    tab name="neovim" cwd="~/.config/nvim/" {
+        neovim-bash
+    }
+    tab name="dotfiles" cwd="~/dotfiles/" {
+        neovim-bash
+    }
+    tab name="zigling" cwd="~/code/zig/ziglings.org/" {
+        neovim-bash
     }
 }
