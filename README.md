@@ -1,12 +1,13 @@
 # New System Setup
 
-## Step 1
+## Steps
+### Step 1
 ```bash
 ssh-keygen -t ed25519 -C "tmrotz@gmail.com"
 cat ~/.ssh/id_ed25519.pub
 ```
 
-## Step 2
+### Step 2
 ```bash
 git clone git@github.com:qmk/qmk_firmware.git
 git clone --recurse-submodules git@github.com:tmrotz/dotfiles.git
@@ -17,15 +18,19 @@ rm -rf ~/.local/share/nvim/ ~/.local/state/nvim/ ~/.cache/nvim/
 stow --adopt linux
 ```
 
-### Omarchy
+#### Omarchy
 ```bash
 stow --adopt omarchy
 ```
 
-### Arch
+#### Arch
 ```bash
 stow --adopt arch
 ```
 
-## Step 3
+### Step 3
 RESTART
+
+## Troubleshooting
+- Failed to run `config` for nvim-treesitter
+  - Run `Lazy sync`?
